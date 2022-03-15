@@ -1,3 +1,3 @@
 # Hola Mundo en Python. ---------------------------------------------
 
-print('Hola Mundo desde Python.\n')
+print(f'Hola Mundo desde Python.\n')
