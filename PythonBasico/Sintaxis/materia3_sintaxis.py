@@ -1,4 +1,4 @@
-# 13. LISTAS. --------------------------------------------------------------------
+# 13. LISTAS. --------------------------------------------------------------------------------
 # Se pueden tener distintos tipos de datos a diferencia de otros lenguajes.
 
 lista = []
@@ -43,6 +43,7 @@ max(lista)#Devuelve el elemento mayor.
 l1 = [0]*10 #Lista con 10 veces el valor de cero.
 l2 = l1#Tanto l1 como l2 apuntan a la misma lista(por referencia)
 l3 = l1.copy()#Crea una copia independiente de l1.
+# Slices ****************************
 l4 = l1[:] #Crea una copia independiente de l1.
 l5 = l1[2:] #Toma los elementos desde la posicion 2 hasta el fin
 l5 = l1[:5] #Toma los elementos desde la posicion 0 hasta 5
@@ -60,4 +61,28 @@ aleatorios = [random.randint(1, 10) for i in range(10)] #llena con 10 numeros al
 matriz = [[1,2,4], [3,5,6], [2,8,6]]
 matriz[0][0] #Devuelve el elemento de la posicion 0,0, se pueden crear matrices de n dimendiones.
 
-# Min: 01:32:18
+# 14. CADENAS: ----------------------------------------------------------------------------------------
+
+cadena = 'hola mundo!'
+cadena[3]
+len(cadena)
+#Se puede utilizar slices. Operaciones basicas de listas tmbn se pueden hacer con cadenas.
+cadena.count('o')
+cadena.find('!')# encuentra la posicion de la primera coincidencia.
+cadena.find('xls')# retorna -1 si no existe dentro de la cadena.
+cadena.index('o')
+cadena.index('o', 5)#Busca a partir de la posición 5.
+'x' in cadena #Retorna True | False.
+lista = ['Jose', 'Ruben', 'Pepito']
+','.join(lista)#Retorna una cadena separada con comas.
+','.join(cadena)
+cadena.lower()
+cadena.upper()
+cadena.capitalize()
+cadena.isdecimal()
+cadena.isdigit()
+cadena.isupper()
+cadena.replace('o', 'O')#Cambia las 'o' por 'O'
+cadena.replace('o', 'O', 1)#Cambia solo la primera coincidencia
+#Las cadenas son inmutables, no se puede cambiar por asignacion, es decir(cadena[2] = 'O') esto no se puede hacer.
+cadena.split[' '] #Regresa una lista con palabras que fueron separadas por el espacio.
