@@ -14,7 +14,7 @@ print(perimetro)
 d = 4  # diametro
 
 # cálculo del perímetro (incluya su código aquí)
-
+perimetro = 2 * pi * (d/2)
 
 # mostrar los resultados
 print(perimetro)
