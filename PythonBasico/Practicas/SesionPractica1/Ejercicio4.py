@@ -14,10 +14,24 @@ rojo + verde --> Error
 rojo + amarillo --> Error
 rojo + rojo --> Critical
 '''
-color1 = input("Ingrese un color [amarillo|verde|rojo]")
-color2 = input("Ingrese otro color [amarillo|verde|rojo]")
+color1 = input("Ingrese un color [amarillo|verde|rojo]: ")
+color2 = input("Ingrese otro color [amarillo|verde|rojo]: ")
 
-# Solucion 1: ############################################
+colores = [color1, color2]
+
+if 'verde' in colores and 'rojo' not in colores:
+    print('OK')
+elif 'amarillo' in colores and color1 == color2:
+    print('Warning')
+elif 'rojo' in colores and color1 == color2:
+    print('Critical')
+elif 'rojo' in colores:
+    print('Error')
+else:
+    print('Color Desconocido!')
+
+''' **********************************************************
+# Solucion mas larga:
 colors = ['amarillo', 'verde']
 if color1 in colors and color2 in colors:
     if color1 == 'amarillo' and color2 == 'amarillo':
@@ -28,5 +42,6 @@ elif color1 == 'rojo' and color2 == 'rojo':
     print('Critical')
 else:
     print('Error')
+    **********************************************************
+'''
 
-# Solusion 2: ############################################
