@@ -1,4 +1,5 @@
 '''
+Ingresar un valor por teclado y validar si es positivo, negativo o cero.
 '''
 x = int(input('Ingrese un valor numerico: '))
 
