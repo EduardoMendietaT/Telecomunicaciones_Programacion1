@@ -17,23 +17,16 @@ rojo + rojo --> Critical
 color1 = input("Ingrese un color [amarillo|verde|rojo]")
 color2 = input("Ingrese otro color [amarillo|verde|rojo]")
 
-'''
-# Por alguna razón esto no funciona.
-if color1 and color2 == 'verde' or color1 == 'amarillo' and color2 == 'verde' or color1 == 'verde' and color2 == 'amarillo':
-    print('OK')
-elif color1  and color2 == 'amarillo':
-    print('Warning')
-elif color1 and color2 == 'rojo':
-    print('Critical')
-else:
-    print('Error')
-'''
-if color1 and color2 in ['amarillo', 'verde']:
-    if color1 and color2 == 'amarillo':
+# Solucion 1: ############################################
+colors = ['amarillo', 'verde']
+if color1 in colors and color2 in colors:
+    if color1 == 'amarillo' and color2 == 'amarillo':
         print('Warning')
     else:
         print('OK')
-elif color1 and color2 == 'rojo':
+elif color1 == 'rojo' and color2 == 'rojo':
     print('Critical')
 else:
     print('Error')
+
+# Solusion 2: ############################################
