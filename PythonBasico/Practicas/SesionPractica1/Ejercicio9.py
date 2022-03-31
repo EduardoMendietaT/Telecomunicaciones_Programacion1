@@ -5,7 +5,7 @@ Salida esperada:
     - Ingrese un mes [1-12]: 08
     - Ingrese un día [1-31]: 23
     - La fecha siguiente es [yyyy-mm-dd] 2016-8-24.
-Tomar en cuenta años bisiesto: (años terminados en 00 deben ser divisibles para 400, resto de años para 4).
+Tomar en cuenta años bisiesto: (años terminados en 00 deben ser divisibles para 400(seculares), resto de años para 4(No seculares)).
 '''
 meses_31 = (1, 3, 5, 7, 8, 10, 12)
 meses_30 = (4, 6, 9, 11)
@@ -14,8 +14,7 @@ anio_str = input("\nIngrese un año: ")
 mes = int(input("Ingrese un mes, [1-12]: "))
 dia = int(input("Ingrese un dia, [1-31]: "))
 
-# Solución 1: *************************************************************
-bisiesto = int(anio_str) % 4 == 0
+bisiesto = int(anio_str) % 400 == 0 if anio_str[-2:] == '00' else int(anio_str) % 4 == 0
 es_correcto = True # Imprime la fecha si los datos son correctos.
 
 anio = int(anio_str) + 1 if mes == 12 and dia == 31 else int(anio_str)
