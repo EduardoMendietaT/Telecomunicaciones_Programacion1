@@ -10,7 +10,7 @@ epoca = estaciones[random.randint(0,3)]
 medicion = random.randint(0, 500)
 mensaje = f'La medición fue de {medicion}mm/h'
 
-# max_normal, max_anormal --> corresponden a los valores maximos en los que se considera una medición
+# max_normal, max_anormal --> corresponden a los valores máximos en los que se considera una medición
 # normal y anormal respectivamente.
 def validar_medicion(max_normal, max_anormal):
     if 0 <=medicion <= max_normal:

@@ -29,19 +29,3 @@ elif 'rojo' in colores:
     print('Error')
 else:
     print('Color Desconocido!')
-
-''' **********************************************************
-# Solucion mas larga:
-colors = ['amarillo', 'verde']
-if color1 in colors and color2 in colors:
-    if color1 == 'amarillo' and color2 == 'amarillo':
-        print('Warning')
-    else:
-        print('OK')
-elif color1 == 'rojo' and color2 == 'rojo':
-    print('Critical')
-else:
-    print('Error')
-    **********************************************************
-'''
-
