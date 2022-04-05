@@ -8,10 +8,10 @@ hora = random.randint(7, 19)
 
 # En el horario 07am y 07pm solicitamos usuario y contraseña para validar.
 if 7 <= hora <= 19:
-
+    
     usuario = input("\nUsuario: ")
     clave = input("Clave: ")
-
+    
     if usuario == "admin" and clave == "password":
         print("\nInicio exitoso.\n")
     else:
