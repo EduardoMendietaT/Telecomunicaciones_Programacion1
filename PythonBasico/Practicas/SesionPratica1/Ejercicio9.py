@@ -26,7 +26,7 @@ else:
 # Variable bandera, cambia a falso si el valor del día no corresponde a un mes.
 es_fecha_correcta = True
 
-# Validamos día[1-12] y mes[1-31].
+# Validamos mes[1-31] y día[1-12].
 if 1 <= mes <= 12 and 1 <= dia <= 31:
 
     if mes in meses_31:

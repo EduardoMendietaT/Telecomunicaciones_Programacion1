@@ -13,12 +13,12 @@ color2 = input('Ingrese otro color [amarillo|verde|rojo]: ')
 
 # Generamos un mensaje en base a la combinación de 2 colores.
 if color1 == 'rojo' and color2 == 'rojo':
-    mensaje = 'Critical.'
+    mensaje = 'Critical'
 elif color1 == 'rojo' or color2 == 'rojo':
-    mensaje = 'Error.'
+    mensaje = 'Error'
 elif color1 == 'amarillo' and color2 == 'amarillo':
-    mensaje = 'Warning.'
+    mensaje = 'Warning'
 else:
-    mensaje = 'Ok.'
+    mensaje = 'Ok'
 
 print(f'\n{color1} + {color2} --> {mensaje}.\n')
