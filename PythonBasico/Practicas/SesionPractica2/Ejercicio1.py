@@ -1,7 +1,9 @@
+'''
+Suma de los números desde el 0-9
+'''
 suma = 0
-
-for i in range(20, 41, 5):
-    print(i)
+for i in range(10):
     suma += i
+    print(i)
 
-print(f'La suma es: {suma}.')
+print(f'La suma es: {suma}.\n')
