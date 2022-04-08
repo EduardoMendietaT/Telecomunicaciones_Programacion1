@@ -16,10 +16,12 @@ import random
 num_lineas = random.randint(1, 100)
 print(f'\nNúmero de lineas = {num_lineas}:\n')
 
-# Convertimos a 'i' en una cadena y extraemos su ultimo elemento.
-# Imprimimos el caracter tantas veces como la variable 'i'.
+# Imprimimos la cadena el número de veces de la variable 'num_lineas'.
 for i in range(1, num_lineas + 1):
-    cadena = f'{i}'[-1] * i
+    cadena = ''
+    # Generamos la cadena concatenando la variable 'i' tantas veces como su valor.
+    for j in range(i):
+        cadena += f'{i}'[-1] # Obtenemos el último elemento de la cadena para concatenar.
     print(cadena)
 
 print('\n')

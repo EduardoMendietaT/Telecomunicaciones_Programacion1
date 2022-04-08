@@ -21,17 +21,15 @@ print(f'\nNúmero de lineas = {num_lineas}:\n')
 # Creamos una cadena con una cantidad de caracteres igual al número de lineas.
 cadena = caracter * num_lineas
 
-# Validamos cuantos caracteres lleva la linea central en base a si la cantidad 
-# de lineas es par o impar.
+# Establecemos el límite central.
 if num_lineas % 2 == 0:
     linea_central = num_lineas / 2
 else:
     linea_central = int(num_lineas / 2) + 1
 
-# Imprimimos la cantidad de caracteres dependiendo de la linea central. 
+# Imprimimos '*' en orden creciente hasta la(s) linea(s) central(es) y luego en sentido decreciente.
 for i in range(1, num_lineas + 1):
     if linea_central >= i:
         print(caracter * i)
     else:
-        # restamos 1 a 'i' revertir hacia abajo la cantidad de caracteres desde la linea central.
         print(cadena[:num_lineas - (i - 1)]) 
