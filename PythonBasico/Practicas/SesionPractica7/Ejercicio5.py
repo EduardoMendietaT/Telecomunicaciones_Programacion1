@@ -25,12 +25,16 @@ def funcion3(x):
 
 def main():
     funciones = [funcion1, funcion2, funcion3]
-    x_vals = range(1, 31)
+    limite_inicio = 1
+    salida = f'\nSalida:\n\n'
+
     for f in funciones:
-        res_f1 = []
-        res_f2 = []
-        res_f3 = []
-        for i in x_vals:
-            if i in range(1, 30, 2):
-                pass
-    pass 
+        res = [f(i) for i in range(limite_inicio, 31, 3)]
+        salida += f'{res}\n'
+        limite_inicio += 1
+
+    print(f'{salida}\n')
+
+
+if __name__ == '__main__':
+    main()
