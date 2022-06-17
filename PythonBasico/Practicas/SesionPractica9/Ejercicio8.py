@@ -22,6 +22,27 @@ Ejecute la función mostrar_potencia(d, dogap, dogrp) mandando como parámetros,
 Finalmente, mostrar las fechas en las que estos outliers sucedieron.
 '''
 import pandas as pd
+import matplotlib.pylab as plt
+import numpy as np
+
+
+def mostrar_potencia(d, dogap, dogrp):
+    fig, ax = plt.subplots(2, 1, figsize=(18, 3), sharex=True)
+    d["Global_active_power"].plot(ax=ax[0])
+    d["Global_reactive_power"].plot(ax=ax[1])
+    dogap["Global_active_power"].plot(ax=ax[0], style="o")
+    dogrp["Global_reactive_power"].plot(ax=ax[1], style="o")
+
 
 df = pd.read_csv('power_consumption.csv', index_col = 0, sep = ',', encoding = 'utf-8-sig', parse_dates = [0])
-print(df.head())
+df_resmp = df.resample('15min').max()
+
+df_pa_outliers = df_resmp.loc[df_resmp['Global_active_power'] >	4]
+
+df_pr_outliers = df_resmp.loc[df_resmp['Global_reactive_power'] > 0.5]
+
+mostrar_potencia(df_resmp, df_pa_outliers, df_pr_outliers)
+
+fechas_outliers = np.concatenate([np.unique(df_pa_outliers.index.date), np.unique(df_pr_outliers.index.date)])
+
+print(f'\nFechas de los outliers: {[i.strftime("%d/%m/%Y") for i in fechas_outliers]}\n')
