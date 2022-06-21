@@ -11,6 +11,18 @@ from matplotlib import pylab as plt
 
 
 def mostrar_grafico_evolucion(df, xlabels, figsize, colors):
+    '''Genera un plot con subplots de manera vertical que representan un grafica de linea de tiempo.
+    PARAMS
+    ------
+    df : DataFrame
+        Dataframe cuyas columnas queremos que apresca en la linea de tiempo.
+    xlabels: str[]
+        Nombre de las etiquetas que apreceran en el eje x, debe tener una cantidad de elementos igual al numero de columnas del dataframe.
+    figsize : int ()
+        Tupla con 2 valores enteros correspondientes al tamaño del plot en el eje x e y.
+    colors : str []
+        String con nombres de colores para cada linea de tiempo, debe tener una cantidad de elementos igual al numero de columnas del dataframe.
+    '''
     columns = df.columns.tolist()
     fig, ax = plt.subplots(len(columns), 1, figsize = figsize, sharex = True)
     for i in range(len(columns)):

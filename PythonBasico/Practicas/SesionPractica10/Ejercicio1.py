@@ -10,10 +10,24 @@ import pandas as pd
 from matplotlib import pylab as plt
 
 
+# Filtra un dataframe(df: DatFrame) recibido por parametros utilizando los valores de una column(cfilter: str)
+# y comparandolos con un valor(vfilter: str), ademas extrae las columnas que se pasan por parametro(cols: str[])
 filtrardf = lambda df, cfilter, vfilter, cols: df.loc[df[cfilter] == vfilter, cols]
 
 
 def mostrar_grafico_barras(xdf, figsize, ascending):
+   '''Genera un plot con varios subplots en forma vertical para graficos de barras.
+   PARAMS
+   ------
+   xdf : DataFrame
+      DataFrame cuya columnas deseamos que se muestren en el grafico de barras.
+   
+   figsize : int ()
+      Tupla con 2 valores enteros correspondientes al tamaño del plot en el eje x e y.
+   
+   ascending : bool
+      True si se desea ordenar las columnas del DataFrame de forma ascendente.
+   '''
    colours = ['orange','green', 'blue', 'yellow', 'red']
    columnnames = xdf.columns.tolist()
    numsubplots = len(columnnames)
