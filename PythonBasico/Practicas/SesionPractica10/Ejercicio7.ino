@@ -6,7 +6,7 @@
 
 
 /*
- *URL DEL CIRCUITO: https://www.tinkercad.com/things/eShPJAQu5D6
+ *URL DEL CIRCUITO: https://www.tinkercad.com/things/7bXSid9odT4
 */
 //Constantes de circuitos asociados a puertos digitales
 #define LED_AMARILLO 2
